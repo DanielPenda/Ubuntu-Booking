@@ -1,4 +1,9 @@
 /* GLOBAL */
+h1, h2, p, .lead {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 body {
     scroll-behavior: smooth;
     background: #0a0a0a;
@@ -12,10 +17,13 @@ body {
     backdrop-filter: blur(10px);
     background: rgba(0,0,0,0.7) !important;
     transition: background 0.3s ease;
+    padding: 1rem 0;
+    backdrop-filter: blur(12px);
 }
 
 .navbar-brand img {
     transition: transform 0.3s ease;
+    height: 2rem;
 }
 
 .navbar-brand img:hover {
@@ -50,12 +58,11 @@ body {
 /* HERO SECTION */
 #home {
     background-image: url(../assets/BgImage.jpeg);
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-top: 8rem; /* scalable spacing */
-    padding-bottom: 4rem;
-    margin-top: 5rem;
+    padding: 20vh 2rem 10vh;       /* responsive vertical spacing */
+    margin-top: 0; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,7 +97,7 @@ body {
     background: rgba(20,20,20,0.85);
     border: 1px solid rgba(255,255,255,0.05);
     border-radius: 1rem;
-    padding: 1.5rem;
+    padding: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -102,6 +109,9 @@ body {
 .card img {
     border-radius: 0.5rem;
     transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .card:hover img {
@@ -157,4 +167,28 @@ h2 {
 /* SMOOTH FADE-IN ANIMATION */
 [data-aos] {
     transition: all 0.6s ease !important;
+}
+
+@media (max-width: 768px) {
+
+    #home {
+        padding: 15vh 1rem 8vh;
+    }
+
+    .btn-lg {
+        padding: 0.8rem 1.8rem;
+        font-size: 1rem;
+    }
+
+    .navbar-brand img {
+        height: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        margin-bottom: 1.5rem;
+    }
 }
