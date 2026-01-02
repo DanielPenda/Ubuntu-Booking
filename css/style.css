@@ -1,7 +1,18 @@
-/* GLOBAL */
-h1, h2, p, .lead {
-    padding-left: 1rem;
-    padding-right: 1rem;
+/* GLOBAL TYPOGRAPHY + SPACING */
+html {
+    font-size: 100%;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 85%;
+    }
 }
 
 body {
@@ -12,18 +23,22 @@ body {
     line-height: 1.6;
 }
 
+h1, h2, p, .lead {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 /* NAVBAR */
 .navbar {
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     background: rgba(0,0,0,0.7) !important;
     transition: background 0.3s ease;
     padding: 1rem 0;
-    backdrop-filter: blur(12px);
 }
 
 .navbar-brand img {
-    transition: transform 0.3s ease;
     height: 2rem;
+    transition: transform 0.3s ease;
 }
 
 .navbar-brand img:hover {
@@ -61,11 +76,12 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 20vh 2rem 10vh;       /* responsive vertical spacing */
-    margin-top: 0; 
+    min-height: 100svh; /* mobile-safe viewport height */
+    padding: 0 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 #home h1 {
@@ -164,24 +180,35 @@ h2 {
     margin-bottom: 2rem;
 }
 
-/* SMOOTH FADE-IN ANIMATION */
+/* AOS ANIMATION TWEAK */
 [data-aos] {
     transition: all 0.6s ease !important;
 }
 
+/* MOBILE OPTIMIZATION */
 @media (max-width: 768px) {
 
+    section {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+
     #home {
-        padding: 15vh 1rem 8vh;
+        padding: 0 1rem;
     }
 
     .btn-lg {
-        padding: 0.8rem 1.8rem;
-        font-size: 1rem;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
     }
 
     .navbar-brand img {
-        height: 1.8rem;
+        height: 1.6rem;
+    }
+
+    .nav-link {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.95rem;
     }
 
     h2 {
@@ -190,5 +217,14 @@ h2 {
 
     .card {
         margin-bottom: 1.5rem;
+    }
+
+    #cartItems .border {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    #cartItems img {
+        width: 40px;
     }
 }
