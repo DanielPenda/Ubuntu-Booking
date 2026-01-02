@@ -87,3 +87,16 @@ export function renderCheckoutItems() {
     <h4>Total: €${total}</h4>
   `;
 }
+
+export function renderSocials() {
+document.getElementById("socials").innerHTML = `
+<a href="https://www.instagram.com/ubuntu_barber9880?igsh=MWJtZzVpamZ0c2k3Yw%3D%3D&utm_source=qr" target="_blank">
+  <img src="assets/icons/instagram.png">
+</a>
+<a href="https://www.facebook.com/Ubuntubarber9880?mibextid=wwXIfr" target="_blank">
+  <img src="assets/icons/facebook.png">
+</a>
+<a href="https://www.tiktok.com/@ubuntu9880" target="_blank">
+  <img src="assets/icons/tiktok.png">
+</a>`;
+}

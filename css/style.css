@@ -1,230 +1,106 @@
-/* GLOBAL TYPOGRAPHY + SPACING */
-html {
-    font-size: 100%;
-}
-
+/* ============ MOBILE APP MODE ============ */
 @media (max-width: 768px) {
-    html {
-        font-size: 90%;
-    }
+
+html, body {
+  overflow-x: hidden;
 }
 
-@media (max-width: 480px) {
-    html {
-        font-size: 85%;
-    }
-}
-
-body {
-    scroll-behavior: smooth;
-    background: #0a0a0a;
-    color: white;
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-}
-
-h1, h2, p, .lead {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-/* NAVBAR */
+/* NAVBAR → Bottom App Bar */
 .navbar {
-    backdrop-filter: blur(12px);
-    background: rgba(0,0,0,0.7) !important;
-    transition: background 0.3s ease;
-    padding: 1rem 0;
+  position: fixed !important;
+  bottom: 0;
+  top: auto;
+  width: 100%;
+  border-top: 1px solid rgba(255,255,255,.08);
+  background: rgba(0,0,0,.95) !important;
+  padding: .4rem 0;
+  z-index: 9999;
 }
 
-.navbar-brand img {
-    height: 2rem;
-    transition: transform 0.3s ease;
-}
+.navbar-brand {display:none;}
 
-.navbar-brand img:hover {
-    transform: scale(1.08);
+.navbar-nav {
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
 }
 
 .nav-link {
-    position: relative;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
+  font-size:.75rem;
+  text-align:center;
+  padding:.4rem;
 }
 
-.nav-link:hover {
-    color: #0d6efd !important;
-}
+.nav-link::after {display:none;}
 
-.nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0.2rem;
-    width: 0%;
-    height: 2px;
-    background: #0d6efd;
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-/* HERO SECTION */
+/* HOME = Fullscreen Hero App Screen */
 #home {
-    background-image: url(../assets/BgImage.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100svh; /* mobile-safe viewport height */
-    padding: 0 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  min-height:100vh;
+  padding:4rem 1.2rem 7rem;
+  align-items:flex-end;
 }
 
-#home h1 {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    letter-spacing: 0.1rem;
+#home .lead {
+  font-size:1.15rem;
 }
 
-#home p {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    opacity: 0.85;
+/* ARTICLES = Mobile Product Grid */
+#articles .row {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1rem;
 }
 
-/* BUTTONS */
-.btn-outline-light,
-.btn-success {
-    border-radius: 2rem;
-    padding: 0.7rem 2rem;
-    transition: all 0.3s ease;
-}
-
-.btn-outline-light:hover,
-.btn-success:hover {
-    transform: translateY(-0.2rem);
-    box-shadow: 0 0.8rem 1.5rem rgba(255,255,255,0.1);
-}
-
-/* ARTICLE CARDS */
+/* PRODUCT CARD = APP TILE */
 .card {
-    background: rgba(20,20,20,0.85);
-    border: 1px solid rgba(255,255,255,0.05);
-    border-radius: 1rem;
-    padding: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding:.6rem;
+  border-radius:1.2rem;
 }
 
-.card:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,0.5);
+.card h5 {font-size:.95rem;}
+.card p {font-size:.8rem;}
+.card button {font-size:.8rem;}
+
+/* CART = Slide-Up App Panel */
+#cart {
+  padding-bottom:7rem;
 }
 
-.card img {
-    border-radius: 0.5rem;
-    transition: transform 0.3s ease;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.card:hover img {
-    transform: scale(1.05);
-}
-
-/* SELECT + INPUT */
-input[type=number],
-select.form-select {
-    background: #111;
-    color: white;
-    border: 1px solid #444;
-    border-radius: 0.5rem;
-    padding: 0.4rem;
-    transition: border 0.3s ease;
-}
-
-input[type=number]:focus,
-select.form-select:focus {
-    border-color: #0d6efd;
-    outline: none;
-}
-
-/* CART ITEMS */
 #cartItems .border {
-    background: rgba(20,20,20,0.8);
-    border-radius: 0.7rem;
-    transition: transform 0.3s ease;
+  display:flex;
+  flex-direction:column;
+  gap:.3rem;
 }
 
-#cartItems .border:hover {
-    transform: translateX(0.3rem);
+/* CONTACT = Compact */
+#contact iframe {height:200px;}
 }
 
-/* CONTACT SECTION */
-#contact iframe {
-    border-radius: 1rem;
-    filter: grayscale(20%);
-    transition: filter 0.3s ease;
+/* ============ SOCIAL ICON APP BAR ============ */
+#socials {
+  display:flex;
+  justify-content:center;
+  gap:1.5rem;
+  margin:1.5rem 0;
 }
 
-#contact iframe:hover {
-    filter: grayscale(0%);
+#socials a {
+  width:3.2rem;
+  height:3.2rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#111;
+  box-shadow:0 0.6rem 1.5rem rgba(0,0,0,.6);
+  transition:all .3s ease;
 }
 
-/* SECTION TITLES */
-h2 {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    letter-spacing: 0.05rem;
-    margin-bottom: 2rem;
+#socials a:hover {
+  transform:scale(1.12);
 }
 
-/* AOS ANIMATION TWEAK */
-[data-aos] {
-    transition: all 0.6s ease !important;
-}
-
-/* MOBILE OPTIMIZATION */
-@media (max-width: 768px) {
-
-    section {
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-    }
-
-    #home {
-        padding: 0 1rem;
-    }
-
-    .btn-lg {
-        padding: 1rem 2rem;
-        font-size: 1.1rem;
-    }
-
-    .navbar-brand img {
-        height: 1.6rem;
-    }
-
-    .nav-link {
-        padding: 0.6rem 0.8rem;
-        font-size: 0.95rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    .card {
-        margin-bottom: 1.5rem;
-    }
-
-    #cartItems .border {
-        padding: 0.8rem;
-        font-size: 0.9rem;
-    }
-
-    #cartItems img {
-        width: 40px;
-    }
+#socials img {
+  width:1.5rem;
 }

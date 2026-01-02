@@ -1,7 +1,7 @@
 // main.js
 import { articles } from "./data.js";
 import { addToCart, updateUnits, removeItem } from "./cart.js";
-import { renderArticles, renderCart, updateCartCount, renderCheckoutItems } from "./ui.js";
+import { renderArticles, renderCart, updateCartCount, renderCheckoutItems, renderSocials } from "./ui.js";
 import { submitReservation } from "./email.js";
 
 // Expose handlers globally for inline HTML onclick
@@ -20,3 +20,4 @@ renderArticles();
 renderCart();
 updateCartCount();
 renderCheckoutItems();
+renderSocials();
