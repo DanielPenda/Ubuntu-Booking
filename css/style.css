@@ -167,25 +167,38 @@ html, body {
 .removeBtn {
   background-color: #ffffff;
   border: none;
-  color: rgb(0, 0, 0);
-  padding: 5px 10px;
+  color: #000;
+  padding: 0.3rem 0.6rem;   /* was 5px 10px */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 12px;
-  border-radius: 5px;
+  font-size: 0.75rem;       /* was 12px */
+  border-radius: 0.3rem;    /* was 5px */
   cursor: pointer;
 }
 
 .proceedBtn {
   background-color: #ffffff;
   border: none;
-  color: rgb(0, 0, 0);
-  padding: 8px 15px;
+  color: #000;
+  padding: 0.5rem 1rem;     /* was 8px 15px */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
-  border-radius: 5px;
+  font-size: 0.875rem;      /* was 14px */
+  border-radius: 0.3rem;    /* was 5px */
+  cursor: pointer;
+}
+
+.formbtn {
+  background-color: #ffffff;
+  border: none;
+  color: #000;
+  padding: 0.6rem 1.2rem;   /* was 10px 20px */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;          /* was 16px */
+  border-radius: 0.3rem;    /* was 5px */
   cursor: pointer;
 }
