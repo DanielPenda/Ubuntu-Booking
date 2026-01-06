@@ -48,7 +48,7 @@ export function renderCart() {
           <input type="number" min="1" value="${c.units}" style="width:50px"
                  onchange="window.updateUnitsHandler(${i}, this.value)">
         </div>
-        <button class="btn btn-sm btn-danger" onclick="window.removeItemHandler(${i})">Remove</button>
+        <button class="removeBtn" onclick="window.removeItemHandler(${i})">Remove</button>
       </div>
     `;
   }).join("");
