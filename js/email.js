@@ -19,11 +19,12 @@ export function submitReservation() {
     email,
     phone,
     reservation_id,
+    logo_url: "https://danielpenda.github.io/Ubuntu-Booking/assets/logo.png",
     reservations: cart.map(c => ({
       name: c.name,
       units: c.units,
       price: c.price,
-      img: c.img
+      image_url: c.img
     })),
     cost: { total: cart.reduce((a, c) => a + c.price * c.units, 0) }
   };

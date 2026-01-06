@@ -54,7 +54,7 @@ export function renderCart() {
   }).join("");
 
   const totalEl = document.getElementById("cartTotal");
-  if (totalEl) totalEl.textContent = total;
+  if (totalEl) totalEl.textContent = total.toFixed(2);
 }
 
 export function renderCheckoutItems() {
