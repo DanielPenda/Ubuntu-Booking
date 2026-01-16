@@ -58,6 +58,10 @@ html, body {
   font-weight:600;
 }
 
+.hero-content{
+    padding-bottom: 2rem;
+}
+
 .hero-buttons {
     display: flex;
     gap: 0.8rem;
