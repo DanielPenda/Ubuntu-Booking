@@ -58,6 +58,25 @@ html, body {
   font-weight:600;
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.book-btn {
+    background: #fff;
+    color: #000;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.book-btn:hover {
+    background: #eaeaea;
+}
+
+
 /* ================== PRODUCT GRID ================== */
 #articles .row {
   display:grid;
