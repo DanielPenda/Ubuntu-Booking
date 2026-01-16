@@ -146,6 +146,26 @@ html, body {
   font-weight:600;
 }
 
+.cart-link {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: 2px;
+    right: 22px;
+    background: #fff;
+    color: #000;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 999px;
+    line-height: 1;
+    min-width: 18px;
+    text-align: center;
+}
+
+
 /* ================== CONTACT ================== */
 #contact {
   padding:2rem 1rem;
