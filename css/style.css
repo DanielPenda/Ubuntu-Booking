@@ -298,60 +298,92 @@ section{
 }
 
 
-/* ================= CHECKOUT APP UI ================= */
+/* Full-height checkout sheet */
 .checkout-body {
-  background:#0a0a0a;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
 }
 
 .checkout-sheet {
-  background:#111;
-  border-radius:1.5rem 1.5rem 0 0;
-  padding:1.2rem;
-  min-height:100vh;
+  background: #111;
+  border-radius: 1.5rem 1.5rem 0 0;
+  padding: 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   animation: slideUp .4s ease;
 }
 
-.form-group {
-  margin-bottom:1rem;
-}
-
+/* Inputs */
 .form-group input {
-  width:100%;
-  padding:1rem;
-  border-radius:1rem;
-  border:none;
-  background:#000;
-  color:#fff;
-  font-size:1rem;
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 
 .form-group input::placeholder {
-  color:#777;
+  color: #777;
 }
 
+/* Checkout items */
 .checkout-items {
-  margin-top:1rem;
+  flex-grow: 1; /* push confirm bar to bottom */
+  overflow-y: auto;
+  padding-bottom: 6rem;
+  margin-top: 1rem;
 }
 
 .checkout-items div {
-  background:#000;
-  border-radius:1rem;
-  padding:.8rem;
-  margin-bottom:.6rem;
+  background: #000;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.checkout-items div img {
+  width: 50px;
+  border-radius: 0.5rem;
+}
+
+/* Confirm button */
 .confirm-bar {
-  position:fixed;
-  bottom:0;
-  left:0;
-  width:100%;
-  background:#fff;
-  color:#000;
-  border:none;
-  padding:1rem;
-  font-size:1.1rem;
-  font-weight:600;
-  z-index:9999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  z-index: 9999;
+  border-radius: 0;
+}
+
+/* Scrollbar for checkout items */
+.checkout-items::-webkit-scrollbar {
+  width: 6px;
+}
+.checkout-items::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+
+/* Mobile-friendly animation */
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0 }
+  to { transform: translateY(0); opacity: 1 }
 }
