@@ -14,7 +14,9 @@ export function renderArticles() {
   list.innerHTML = articles.map(a => `
     <div class="col-md-3 mb-4" data-aos="zoom-in">
       <div class="card p-3 text-center">
-        <img src="${a.img}" class="img-fluid mb-2">
+        <img src="${a.img}" 
+     class="img-fluid mb-2 product-img"
+     onclick="window.openProductModal(${a.id})">
         <h5>${a.name}</h5>
         <p>€${a.price}</p>
 
@@ -84,19 +86,23 @@ export function renderCheckoutItems() {
 
   checkoutDiv.innerHTML += `
     <hr>
-    <h4>Total: €${total}</h4>
+    <h4>Total: €${total.toFixed(2)}</h4>
   `;
 }
 
 export function renderSocials() {
-document.getElementById("socials").innerHTML = `
-<a href="https://www.instagram.com/ubuntu_barber9880?igsh=MWJtZzVpamZ0c2k3Yw%3D%3D&utm_source=qr" target="_blank">
-  <img src="assets/icons/instagram.png">
-</a>
-<a href="https://www.facebook.com/Ubuntubarber9880?mibextid=wwXIfr" target="_blank">
-  <img src="assets/icons/facebook.png">
-</a>
-<a href="https://www.tiktok.com/@ubuntu9880" target="_blank">
-  <img src="assets/icons/tiktok.png">
-</a>`;
+  const socialsEl = document.getElementById("socials");
+  if (!socialsEl) return; // exit if not present
+
+  socialsEl.innerHTML = `
+    <a href="https://www.instagram.com/ubuntu_barber9880" target="_blank">
+      <img src="assets/icons/instagram.png">
+    </a>
+    <a href="https://www.facebook.com/Ubuntubarber9880" target="_blank">
+      <img src="assets/icons/facebook.png">
+    </a>
+    <a href="https://www.tiktok.com/@ubuntu9880" target="_blank">
+      <img src="assets/icons/tiktok.png">
+    </a>
+  `;
 }

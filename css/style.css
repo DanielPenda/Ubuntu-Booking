@@ -246,3 +246,112 @@ html, body {
 section{
     min-height:100vh;
 }
+
+
+.product-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  backdrop-filter: blur(6px);
+}
+
+.product-modal-content {
+  background: #111;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  max-width: 90%;
+  text-align: center;
+  animation: slideUp .3s ease;
+}
+
+.product-modal-content img {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.product-modal-content h3 {
+  margin-bottom: .5rem;
+}
+
+.product-modal-content p {
+  font-size: .9rem;
+  color: #aaa;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0 }
+  to { transform: translateY(0); opacity: 1 }
+}
+
+
+/* ================= CHECKOUT APP UI ================= */
+.checkout-body {
+  background:#0a0a0a;
+  margin:0;
+  padding:0;
+}
+
+.checkout-sheet {
+  background:#111;
+  border-radius:1.5rem 1.5rem 0 0;
+  padding:1.2rem;
+  min-height:100vh;
+  animation: slideUp .4s ease;
+}
+
+.form-group {
+  margin-bottom:1rem;
+}
+
+.form-group input {
+  width:100%;
+  padding:1rem;
+  border-radius:1rem;
+  border:none;
+  background:#000;
+  color:#fff;
+  font-size:1rem;
+}
+
+.form-group input::placeholder {
+  color:#777;
+}
+
+.checkout-items {
+  margin-top:1rem;
+}
+
+.checkout-items div {
+  background:#000;
+  border-radius:1rem;
+  padding:.8rem;
+  margin-bottom:.6rem;
+}
+
+.confirm-bar {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#fff;
+  color:#000;
+  border:none;
+  padding:1rem;
+  font-size:1.1rem;
+  font-weight:600;
+  z-index:9999;
+}
