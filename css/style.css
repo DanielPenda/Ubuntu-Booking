@@ -86,6 +86,8 @@ html, body {
 
 .book-btn:hover {
   background: #eaeaea;
+  margin-bottom: 22.5rem;
+  opacity: 0;
 }
 
 .hero-message p {
