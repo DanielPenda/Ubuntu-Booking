@@ -27,66 +27,65 @@ html, body {
 .nav-link {font-size:.75rem;text-align:center;padding:.5rem;}
 .nav-link::after {display:none;}
 
-/* ================== HERO ================== */
 #home {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 1rem 6rem;
-
-    background-image: url("../assets/bgImage.png") !important;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-
-#home .lead {
-  font-size:0.7rem;
-  font-weight:500;
-  margin-bottom:1.5rem;
-}
-
-#home .btn-lg {
-  border-radius:30px;
-  padding:.7rem 2rem;
-  font-size:1rem;
-  font-weight:600;
-}
-
-.hero-content{
-    padding-bottom: 2rem;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 0.8rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.book-btn {
-    background: #fff;
-    color: #000;
-    border-radius: 30px;
-    font-weight: 600;
-}
-
-.book-btn:hover {
-    background: #eaeaea;
-}
-
-.hero-message {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* stack message + hero content */
+  justify-content: flex-start; /* start from top for message */
+  align-items: center;
   text-align: center;
+  padding: 2rem 1rem 2rem; /* reduce bottom padding for hero-buttons, content will push itself */
+  background-image: url("../assets/bgImage.png") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Hero message stays at top */
+.hero-message {
+  margin-bottom: auto; /* this pushes remaining content down */
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  margin-bottom: 25rem;
-  opacity: 0;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+}
+
+/* Hero content is pushed to bottom */
+.hero-content {
+  margin-top: auto; /* push it down to bottom of section */
+  padding-bottom: 3rem;
+}
+
+#home .lead {
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+#home .btn-lg {
+  border-radius: 30px;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.book-btn {
+  background: #fff;
+  color: #000;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.book-btn:hover {
+  background: #eaeaea;
 }
 
 .hero-message p {
@@ -94,6 +93,7 @@ html, body {
   line-height: 1.3;
   letter-spacing: 0.5px;
 }
+
 
 
 
