@@ -57,6 +57,11 @@ export function renderCart() {
 
   const totalEl = document.getElementById("cartTotal");
   if (totalEl) totalEl.textContent = total.toFixed(2);
+
+    const proceedBtn = document.getElementById("proceedBtn");
+  if (proceedBtn) {
+    proceedBtn.style.display = cart.length > 0 ? "inline-block" : "none";
+  }
 }
 
 export function renderCheckoutItems() {

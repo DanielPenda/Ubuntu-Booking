@@ -54,7 +54,7 @@ html, body {
 /* Hero content is pushed to bottom */
 .hero-content {
   margin-top: auto; /* push it down to bottom of section */
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
 }
 
 #home .lead {
@@ -75,6 +75,7 @@ html, body {
   gap: 0.8rem;
   justify-content: center;
   flex-wrap: wrap;
+  transition: transform 0.15s ease, opacity 0.15s ease, background 0.15s ease;
 }
 
 .book-btn {
@@ -84,11 +85,13 @@ html, body {
   font-weight: 600;
 }
 
-.book-btn:hover {
+.book-btn:hover,
+.book-btn:active {
   background: #eaeaea;
-  margin-bottom: 22.5rem;
-  opacity: 0;
+  transform: scale(0.96);
+  opacity: 0.9;
 }
+
 
 .hero-message p {
   margin: 0;
@@ -372,4 +375,8 @@ section{
   font-size:1.1rem;
   font-weight:600;
   z-index:9999;
+}
+
+#proceedBtn {
+  display: none;
 }
