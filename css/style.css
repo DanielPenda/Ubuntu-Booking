@@ -54,7 +54,7 @@ html, body {
 /* Hero content is pushed to bottom */
 .hero-content {
   margin-top: auto; /* push it down to bottom of section */
-  padding-bottom: 4rem;
+  padding-bottom: 6rem; /* space for bottom navbar */
 }
 
 #home .lead {
