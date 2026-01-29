@@ -37,7 +37,7 @@ Claim your identity.`
     price:42.99,
     stock:5,
     type:"cloth", // IMPORTANT: includes T-shirt
-    sizes:["S","M","L","XXL"],
+    sizes:["S","L","XXL"],
     img:"https://danielpenda.github.io/Ubuntu-Booking/assets/set.png",
     description:`Everything in one box.
 Wear it. Carry it. Live it.`
